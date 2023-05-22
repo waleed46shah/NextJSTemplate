@@ -2,6 +2,10 @@ Fork the repository and follow the steps to complete the tasks
 
 ## Step to follow for the interview project
 
+Create and deploy a Next.js admin dashboard with TypeScript and Tailwind CSS, featuring user authentication, state management using useState, theme functionality and a chart library.
+
+
+Project Setup
 - Create a new Next.js project using the command-line interface (CLI). (DONE)
 - Configure TypeScript support in the project. (DONE)
 - Install and configure Tailwind CSS for styling. (DONE)
@@ -21,12 +25,12 @@ State management with useState:
 - Use the useState hook to manage local state within components.
 - Identify areas where state is needed, such as toggling a sidebar, managing form inputs, or controlling UI elements.
 - Implement state variables and corresponding update functions using useState in the relevant components. (OPTIONAL)
-- Implement state management using useContext hook or redux-toolkit (OPTIONAL)
+- Implement state management using useContext hook or redux-toolkit
 
 
 Dashboard overview:
-- Design a dashboard overview page that displays key metrics, charts, or a table (3 Metrics).
-- Fetch and display relevant data from the backend API or database. (OPTIONAL)
+- Design a dashboard overview page that displays key metrics, charts, or a table (One each).
+- Fetch and display relevant data from the backend API or database or a dummy json file.
 - Use data visualization libraries like Chart.js or React-Vis to present charts and graphs.
 
 Data management and CRUD operations:
