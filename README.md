@@ -66,7 +66,7 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - Follow a consistent and descriptive format for your Git commit messages.
 - Document any external dependencies, libraries, or APIs used in your project, including their purpose and usage.
 
-Share the link of the deployed project with the HR rep. You are allowed to use this project as one of your personal portfolio projects.
+Share the link of the deployed project and the forked github repository with the HR rep. You are allowed to use this project as one of your personal portfolio projects.
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
