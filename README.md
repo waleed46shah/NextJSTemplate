@@ -27,17 +27,16 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - *Implement state variables and corresponding update functions using useState in the relevant components. (OPTIONAL)*
 - Implement state management using useContext hook or redux-toolkit
 
-
 5. Dashboard overview:
-- Design a dashboard overview page that displays key metrics, charts, or a table (One each).
-- Fetch and display relevant data from the backend API or database or a dummy json file.
+- Fetch and display relevant data from https://dummyjson.com/products .
+- Design a dashboard overview page that displays key metrics (Average Rating of all the products), charts(count of products by category), or a table (table with columns title, description, price, category, brand, stock and thumbnail).
 - Use data visualization libraries like Chart.js or React-Vis to present charts and graphs.
 
 6. *Data management and CRUD operations (OPTIONAL):*
 - *Create data management pages for entities such as sample users, products, orders, etc. (OPTIONAL)*
 - *Implement CRUD (Create, Read, Update, Delete) functionality for these entities. (OPTIONAL)*
 - *Use forms and input validation to ensure data integrity. (OPTIONAL)*
-- *Communicate with the backend API using libraries like Axios or Fetch. (OPTIONAL)*
+- Communicate with the backend API using libraries like Axios or Fetch.
   
 7. UI components and styling:
 - Build reusable UI components like tables, forms, modals, notifications, etc.
@@ -45,7 +44,7 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - Utilize Tailwind CSS utility classes and components for styling and layout.
 
 8. Data filtering and searching:
-- Implement filtering and searching functionality for data lists or tables.
+- Implement filtering and searching functionality for data lists or tables (filter by category and brand).
 - Allow users to apply filters based on specific criteria and search for specific records.
 - Update the displayed data dynamically based on the applied filters or search query.
 
@@ -55,12 +54,12 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - *Apply different CSS classes or styles based on the selected theme. (OPTIONAL)*
 - *Persist the theme preference in local storage or cookies for a consistent theme across sessions. (OPTION*AL)
 
-10. Deployment and optimization:
+10.   Deployment and optimization:
 - Deploy the admin dashboard application to a hosting platform like Vercel.
 - *Optimize the application for performance, including code splitting, lazy loading, and caching. (OPTIONAL)*
 - *Implement server-side rendering (SSR) or static site generation (SSG) for improved initial loading speed. (OPTIONAL)*
 
-11. Expected Best Practices
+1.   Expected Best Practices
 - Adhere to es6/es7 coding standards and best practices throughout the project.
 - Write clean and readable code, following proper indentation and formatting conventions.
 - Use meaningful variable and function names that accurately describe their purpose.
