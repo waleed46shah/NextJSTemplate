@@ -2,11 +2,11 @@ Fork the repository and follow the steps to complete the tasks
 
 ## Steps to follow for the interview project
 
-Create and deploy a Next.js admin dashboard with TypeScript and Tailwind CSS, featuring user authentication, state management using useState, theme functionality and a chart library.
+You are expected to develop and deploy a demo of a Next.js admin dashboard with Javascript/TypeScript and Tailwind CSS. Include the features listed below in your project. 
 
 
 1. Project Setup
-- *Create a new Next.js project using the command-line interface (CLI). (DONE)*
+- *Fork the repository to your github and clone the forked repository to your desktop*
 - *Configure TypeScript support in the project. (DONE)*
 - *Install and configure Tailwind CSS for styling. (DONE)*
   
@@ -14,7 +14,7 @@ Create and deploy a Next.js admin dashboard with TypeScript and Tailwind CSS, fe
 2. Authentication and authorization:
 - Implement a user authentication system using a library like NextAuth.js or JWT (JSON Web Tokens).
 - *Define different user roles and permissions for accessing different parts of the admin dashboard. (OPTIONAL)*
-- Restrict access to certain routes or components based on user roles and permissions.
+- *Restrict access to certain routes or components based on user roles and permissions. (OPTIONAL)*
 
 3. Routing and navigation:
 - Set up a navigation system using Next.js routing.
@@ -60,11 +60,17 @@ Create and deploy a Next.js admin dashboard with TypeScript and Tailwind CSS, fe
 - *Optimize the application for performance, including code splitting, lazy loading, and caching. (OPTIONAL)*
 - *Implement server-side rendering (SSR) or static site generation (SSG) for improved initial loading speed. (OPTIONAL)*
 
+11. Expected Best Practices
+- Adhere to es6/es7 coding standards and best practices throughout the project.
+- Write clean and readable code, following proper indentation and formatting conventions.
+- Use meaningful variable and function names that accurately describe their purpose.
+- Follow a consistent and descriptive format for your Git commit messages.
+- Document any external dependencies, libraries, or APIs used in your project, including their purpose and usage.
 
 Share the link of the deployed project with the HR rep. You are allowed to use this project as one of your personal portfolio projects.
 
 
-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
