@@ -29,7 +29,7 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 
 5. Dashboard overview:
 - Fetch and display relevant data from https://dummyjson.com/products .
-- Design a dashboard overview page that displays key metrics (Average Rating of all the products), charts(count of products by category), or a table (table with columns title, description, price, category, brand, stock and thumbnail).
+- Design a dashboard overview page that displays key metrics (Average Rating of all the products), charts(count of products by category) and a table (table with columns title, description, price, category, brand, stock and thumbnail).
 - Use data visualization libraries like Chart.js or React-Vis to present charts and graphs.
 
 6. *Data management and CRUD operations (OPTIONAL):*
@@ -59,7 +59,7 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - *Optimize the application for performance, including code splitting, lazy loading, and caching. (OPTIONAL)*
 - *Implement server-side rendering (SSR) or static site generation (SSG) for improved initial loading speed. (OPTIONAL)*
 
-1.   Expected Best Practices
+11.   Expected Best Practices
 - Adhere to es6/es7 coding standards and best practices throughout the project.
 - Write clean and readable code, following proper indentation and formatting conventions.
 - Use meaningful variable and function names that accurately describe their purpose.
