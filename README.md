@@ -4,17 +4,15 @@ FORK the repository and follow the steps to complete the tasks. The final submis
 
 You are expected to develop and deploy a demo of a Next.js admin dashboard with Javascript/TypeScript and Tailwind CSS. Include the features listed below in your project. 
 
+**MANDATORY TASKS**
 
 1. Project Setup
 - *Fork the repository to your github and clone the forked repository to your desktop*
 - *Configure TypeScript support in the project. (DONE)*
 - *Install and configure Tailwind CSS for styling. (DONE)*
   
-
 2. Authentication and authorization:
 - Implement a user authentication system using a library like NextAuth.js or JWT (JSON Web Tokens).
-- *Define different user roles and permissions for accessing different parts of the admin dashboard. (OPTIONAL)*
-- *Restrict access to certain routes or components based on user roles and permissions. (OPTIONAL)*
 
 3. Routing and navigation:
 - Set up a navigation system using Next.js routing.
@@ -24,7 +22,6 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 4. State management with useState:
 - Use the useState hook to manage local state within components.
 - Identify areas where state is needed, such as toggling a sidebar, managing form inputs, or controlling UI elements.
-- *Implement state variables and corresponding update functions using useState in the relevant components. (OPTIONAL)*
 - Implement state management using useContext hook or redux-toolkit.
 
 5. Dashboard overview:
@@ -32,10 +29,7 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - Design a dashboard overview page that displays key metrics (Average Rating of all the products), charts(count of products by category) and a table (table with columns title, description, price, category, brand, stock and thumbnail).
 - Use data visualization libraries like Chart.js or React-Vis to present charts and graphs.
 
-6. *Data management and CRUD operations (OPTIONAL):*
-- *Create data management pages for entities such as sample users, products, orders, etc. (OPTIONAL)*
-- *Implement CRUD (Create, Read, Update, Delete) functionality for these entities. (OPTIONAL)*
-- *Use forms and input validation to ensure data integrity. (OPTIONAL)*
+6. *Data management and CRUD operations :*
 - Communicate with the backend API using libraries like Axios or Fetch.
   
 7. UI components and styling:
@@ -48,16 +42,8 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - Allow users to apply filters based on specific criteria and search for specific records.
 - Update the displayed data dynamically based on the applied filters or search query.
 
-9. *Theme functionality (OPTIONAL):*
-- *Implement a theme switcher that allows users to switch between light and dark themes. (OPTIONAL)*
-- *Use the useState hook to manage the current theme state. (OPTIONAL)*
-- *Apply different CSS classes or styles based on the selected theme. (OPTIONAL)*
-- *Persist the theme preference in local storage or cookies for a consistent theme across sessions. (OPTION*AL)
-
-10.   Deployment and optimization:
+9.   Deployment and optimization:
 - Deploy the admin dashboard application to a hosting platform like Vercel.
-- *Optimize the application for performance, including code splitting, lazy loading, and caching. (OPTIONAL)*
-- *Implement server-side rendering (SSR) or static site generation (SSG) for improved initial loading speed. (OPTIONAL)*
 
 11.   Expected Best Practices
 - Adhere to es6/es7 coding standards and best practices throughout the project.
@@ -65,6 +51,39 @@ You are expected to develop and deploy a demo of a Next.js admin dashboard with 
 - Use meaningful variable and function names that accurately describe their purpose.
 - Follow a consistent and descriptive format for your Git commit messages.
 - Document any external dependencies, libraries, or APIs used in your project, including their purpose and usage.
+
+
+**OPTIONAL TASKS**
+
+We highly encourage you to explore the optional tasks for the interview project. These tasks will not only demonstrate your technical skills but also allow you to showcase your creativity and ability to go above and beyond the minimum requirements.
+
+By completing the optional tasks, you can further enhance your admin dashboard and create a more comprehensive and polished project. These tasks provide opportunities to dive deeper into advanced concepts and technologies, allowing you to challenge yourself and create an even more impressive final result.
+<details>
+  <summary>Show Optional Tasks</summary>
+  
+    Authentication and authorization:
+    - *Define different user roles and permissions for accessing different parts of the admin dashboard. (OPTIONAL)*
+    - *Restrict access to certain routes or components based on user roles and permissions. (OPTIONAL)*
+    
+    State management with useState:
+    - *Implement state variables and corresponding update functions using useState in the relevant components. (OPTIONAL)*
+    
+    Data management and CRUD operations:
+    - *Create data management pages for entities such as sample users, products, orders, etc. (OPTIONAL)*
+    - *Implement CRUD (Create, Read, Update, Delete) functionality for these entities. (OPTIONAL)*
+    - *Use forms and input validation to ensure data integrity. (OPTIONAL)*
+    
+    Theme functionality:
+    - *Implement a theme switcher that allows users to switch between light and dark themes. (OPTIONAL)*
+    - *Use the useState hook to manage the current theme state. (OPTIONAL)*
+    - *Apply different CSS classes or styles based on the selected theme. (OPTIONAL)*
+    - *Persist the theme preference in local storage or cookies for a consistent theme across sessions. (OPTION*AL)
+    
+    Deployment and optimization:
+    - *Optimize the application for performance, including code splitting, lazy loading, and caching. (OPTIONAL)*
+    - *Implement server-side rendering (SSR) or static site generation (SSG) for improved initial loading speed. (OPTIONAL)*
+
+</details>
 
 Share the link of the deployed project and the forked github repository with the HR rep. You are encouraged to use this project as one of your personal portfolio projects.
 
