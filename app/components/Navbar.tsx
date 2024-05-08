@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -27,12 +28,12 @@ const Navbar = () => {
                   className="hidden h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
@@ -41,12 +42,12 @@ const Navbar = () => {
                   className="block h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
@@ -74,14 +75,17 @@ const Navbar = () => {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="relative ml-3">
+            <div className="relative ml-3 flex gap-2 items-center">
+              <ThemeSwitch />
+
               <div>
-                <button
+                <Link
+                  href="/login"
                   type="button"
                   className="relative flex rounded-md bg-gray-700 p-2 text-sm "
                 >
                   Sign In
-                </button>
+                </Link>
               </div>
             </div>
           </div>
