@@ -12,7 +12,7 @@ interface SigninFormProps {
   fields: FormField[];
 }
 
-const Form: React.FC<SigninFormProps> = ({ fields }) => {
+const Form = ({ fields }: SigninFormProps) => {
   return (
     <form>
       <div className="space-y-12">

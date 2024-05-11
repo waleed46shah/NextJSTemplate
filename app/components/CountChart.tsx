@@ -46,31 +46,34 @@ const CountChart: React.FC<Props> = ({ categories }) => {
     const counts = Array.from(categoryCounts.values());
 
     new Chart(ctx, {
-      type: "bar",
+      type: "pie", // Change chart type to pie
       data: {
         labels: labels,
         datasets: [
           {
             label: "Product Counts",
             data: counts,
-            backgroundColor: "rgba(54, 162, 235, 0.6)",
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.6)",
+              "rgba(54, 162, 235, 0.6)",
+              "rgba(255, 206, 86, 0.6)",
+              "rgba(75, 192, 192, 0.6)",
+              "rgba(153, 102, 255, 0.6)",
+              "rgba(255, 159, 64, 0.6)",
+              "rgba(255, 99, 132, 0.6)",
+            ], // You can add more colors as needed
           },
         ],
       },
       options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: "Count",
-            },
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "top",
           },
-          x: {
-            title: {
-              display: true,
-              text: "Category",
-            },
+          title: {
+            display: true,
+            text: "Product Counts by Category",
           },
         },
       },
@@ -79,7 +82,7 @@ const CountChart: React.FC<Props> = ({ categories }) => {
 
   return (
     <div className="w-full p-6 flex flex-col items-center">
-      <canvas className=" max-w-5xl" id="countChart"></canvas>
+      <canvas className="max-w-5xl" id="countChart"></canvas>
     </div>
   );
 };
