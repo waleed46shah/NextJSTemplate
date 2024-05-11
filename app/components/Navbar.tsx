@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import ThemeSwitch from "./ThemeSwitch";
+import { getServerSession } from "next-auth";
+import { signOut } from "next-auth/react";
 
-const Navbar = () => {
+const Navbar = (session: any) => {
   const [navOpen, setNavOpen] = useState(false);
   const [currentRoute, setCurrentRoute] = useState("/");
 
@@ -78,15 +79,18 @@ const Navbar = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div className="relative ml-3 flex gap-2 items-center">
               <div>
-                {true ? (
-                  <Link
-                    href="/login"
+                {!!session && (
+                  <button
                     type="button"
                     className="relative flex rounded-md bg-gray-700 p-2 text-sm "
+                    onClick={() => {
+                      signOut();
+                    }}
                   >
                     Logout
-                  </Link>
-                ) : (
+                  </button>
+                )}
+                {!session && (
                   <Link
                     href="/login"
                     type="button"

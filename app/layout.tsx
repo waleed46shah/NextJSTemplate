@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import { getServerSession } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,13 +15,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const server = getServerSession();
   return (
     <html lang="en">
       <body
         suppressHydrationWarning
         className=" bg-white dark:bg-gray-900 text-black dark:text-white"
       >
-        <Navbar />
+        <Navbar server={server} />
         {children}
       </body>
     </html>

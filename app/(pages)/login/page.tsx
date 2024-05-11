@@ -1,12 +1,11 @@
-import React from "react";
+import { getServerSession } from "next-auth";
+import Form from "./form";
+import { redirect } from "next/navigation";
 
-const LoginPage: React.FC = () => {
-  return (
-    <div>
-      <h1>Login</h1>
-      <button>Sign in with GitHub</button>
-    </div>
-  );
-};
-
-export default LoginPage;
+export default async function LoginPage() {
+  const session = await getServerSession();
+  if (session) {
+    redirect("/");
+  }
+  return <Form />;
+}

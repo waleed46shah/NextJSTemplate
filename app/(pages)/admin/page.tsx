@@ -1,10 +1,9 @@
 import React from "react";
 
-const page = () => {
-  return;
-  <div>
-    <h1>Admin Panel</h1>
-  </div>;
+type Props = {};
+
+const page = (props: Props) => {
+  return <div>page</div>;
 };
 
 export default page;
