@@ -1,8 +1,6 @@
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
-import { AuthProvider } from "./context/AuthContext";
 import "./globals.css";
-import { ThemeContext } from "./context/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +20,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className=" bg-white dark:bg-gray-900 text-black dark:text-white"
       >
-        <ThemeContext>
-          <Navbar />
-          {children}
-        </ThemeContext>
+        <Navbar />
+        {children}
       </body>
     </html>
   );

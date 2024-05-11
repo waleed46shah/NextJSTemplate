@@ -1,14 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/app/context/AuthContext";
 
 export default function DeniedPage() {
-  const { logout } = useAuth();
   const router = useRouter();
 
   const handleLogout = () => {
-    logout();
     router.push("/login");
   };
 

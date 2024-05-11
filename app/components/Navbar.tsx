@@ -2,12 +2,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
-import { useAuth } from "../hooks/useAuth";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [currentRoute, setCurrentRoute] = useState("/");
-  const { isAuthenticated, logout } = useAuth();
 
   const routes = [
     { path: "/", name: "Home" },
@@ -79,15 +77,12 @@ const Navbar = () => {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div className="relative ml-3 flex gap-2 items-center">
-              <ThemeSwitch />
-
               <div>
-                {isAuthenticated ? (
+                {true ? (
                   <Link
                     href="/login"
                     type="button"
                     className="relative flex rounded-md bg-gray-700 p-2 text-sm "
-                    onClick={() => logout()}
                   >
                     Logout
                   </Link>
