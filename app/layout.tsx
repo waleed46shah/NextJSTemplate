@@ -23,10 +23,8 @@ export default function RootLayout({
         className=" bg-white dark:bg-gray-900 text-black dark:text-white"
       >
         <ThemeContext>
-          <AuthProvider>
-            <Navbar />
-            {children}
-          </AuthProvider>
+          <Navbar />
+          {children}
         </ThemeContext>
       </body>
     </html>

@@ -2,24 +2,14 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { register } from "../api/auth/api";
-import { useAuth } from "@/app/context/AuthContext";
 export default function SignupPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState<"admin" | "user">("user");
-  const { login } = useAuth();
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const token = await register(username, password, role);
-    if (token) {
-      login(token);
-      router.push("/");
-    } else {
-      alert("Username already exists");
-    }
   };
 
   return (
