@@ -48,3 +48,18 @@ export const signupFields = [
     placeholder: "********",
   },
 ];
+
+export const User = [
+  {
+    id: 1,
+    name: "admin",
+    password: "1234",
+    role: "admin",
+  },
+  {
+    id: 2,
+    name: "user",
+    password: "1234",
+    role: "user",
+  },
+];

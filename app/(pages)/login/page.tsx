@@ -1,24 +1,51 @@
-import React from "react";
-import Form from "@/app/components/Form";
+// app/login/page.tsx
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { authenticate } from "../api/auth/api";
+import { useAuth } from "@/app/context/AuthContext";
 import Link from "next/link";
-import { loginFields } from "@/app/data";
+export default function LoginPage() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth();
+  const router = useRouter();
 
-const Page = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const token = await authenticate(username, password);
+    if (token) {
+      login(token);
+      router.push("/");
+    } else {
+      alert("Invalid username or password");
+    }
+  };
+
   return (
-    <main className="h-screen w-full flex justify-center items-center ">
-      <div className="p-4 lg:w-1/2 bg-slate-300 dark:bg-slate-300 dark:bg-inherit rounded-lg">
-        <h2 className="text-base font-semibold leading-7 text-gray-900">
-          Login
-        </h2>
-        <Form fields={loginFields} />
-        <div className="flex justify-center items-center">
-          <Link className=" text-gray-800" href="/signup">
-            Dont have an account? Signup
-          </Link>
-        </div>
+    <div>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="submit">Login</button>
+      </form>
+      <div className="mt-4">
+        <Link className=" underline" href="/signup">
+          SIGN UP INSTEAD
+        </Link>
       </div>
-    </main>
+    </div>
   );
-};
-
-export default Page;
+}

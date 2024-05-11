@@ -2,10 +2,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
+import { useAuth } from "../hooks/useAuth";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [currentRoute, setCurrentRoute] = useState("/");
+  const { isAuthenticated, logout } = useAuth();
 
   const routes = [
     { path: "/", name: "Home" },
@@ -80,13 +82,24 @@ const Navbar = () => {
               <ThemeSwitch />
 
               <div>
-                <Link
-                  href="/login"
-                  type="button"
-                  className="relative flex rounded-md bg-gray-700 p-2 text-sm "
-                >
-                  Sign In
-                </Link>
+                {isAuthenticated ? (
+                  <Link
+                    href="/login"
+                    type="button"
+                    className="relative flex rounded-md bg-gray-700 p-2 text-sm "
+                    onClick={() => logout()}
+                  >
+                    Logout
+                  </Link>
+                ) : (
+                  <Link
+                    href="/login"
+                    type="button"
+                    className="relative flex rounded-md bg-gray-700 p-2 text-sm "
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>

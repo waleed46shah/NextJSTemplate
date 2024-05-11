@@ -1,13 +1,22 @@
-import React from "react";
+"use client";
 
-const page = () => {
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
+
+export default function DeniedPage() {
+  const { logout } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    logout();
+    router.push("/login");
+  };
+
   return (
-    <main className="h-screen w-full flex items-center justify-center">
-      <h1 className="text-6xl font-bold">
-        YOU ARE NOT AUTHORIZED TO ACCESS THIS PAGE
-      </h1>
-    </main>
+    <div>
+      <h1>Access Denied</h1>
+      <p>You do not have permission to access this page.</p>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
   );
-};
-
-export default page;
+}

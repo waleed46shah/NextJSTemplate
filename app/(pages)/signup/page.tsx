@@ -1,24 +1,65 @@
-import React from "react";
-import Form from "@/app/components/Form";
-import Link from "next/link";
-import { signupFields } from "@/app/data";
+"use client";
 
-const Page = () => {
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { register } from "../api/auth/api";
+import { useAuth } from "@/app/context/AuthContext";
+export default function SignupPage() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState<"admin" | "user">("user");
+  const { login } = useAuth();
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const token = await register(username, password, role);
+    if (token) {
+      login(token);
+      router.push("/");
+    } else {
+      alert("Username already exists");
+    }
+  };
+
   return (
-    <main className="h-screen w-full flex justify-center items-center ">
-      <div className="p-4 lg:w-1/2 bg-slate-300 dark:bg-slate-300 dark:bg-inherit rounded-lg">
-        <h2 className="text-base font-semibold leading-7 text-gray-900">
-          Sign Up
-        </h2>
-        <Form fields={signupFields} />
-        <div className="flex justify-center items-center">
-          <Link className=" text-gray-800" href={{ pathname: "/login" }}>
-            Already have an account? Login
-          </Link>
+    <div>
+      <h1>Sign Up</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <div>
+          <label>
+            <input
+              type="radio"
+              value="user"
+              checked={role === "user"}
+              onChange={() => setRole("user")}
+            />
+            User
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="admin"
+              checked={role === "admin"}
+              onChange={() => setRole("admin")}
+            />
+            Admin
+          </label>
         </div>
-      </div>
-    </main>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   );
-};
-
-export default Page;
+}

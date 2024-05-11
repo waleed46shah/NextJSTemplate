@@ -1,4 +1,7 @@
+// components/Form.tsx
+
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface FormField {
   name: string;
@@ -10,11 +13,24 @@ interface FormField {
 
 interface SigninFormProps {
   fields: FormField[];
+  onSubmit: (data: Record<string, string>) => void;
 }
 
-const Form = ({ fields }: SigninFormProps) => {
+const Form: React.FC<SigninFormProps> = ({ fields, onSubmit }) => {
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = value.toString();
+    });
+    onSubmit(data);
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           {fields.map((field, index) => (
